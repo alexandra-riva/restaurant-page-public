@@ -1,6 +1,6 @@
-const sancocho = require('../assets/images/sancocho.jpg');
 import menu from './menu';
 import contact from './contact';
+import sancocho from '../assets/images/sancocho.jpg';
 
 function home() {
     const content = document.querySelector("#content");
@@ -16,7 +16,7 @@ function home() {
     content.appendChild(header);
 
     const image = document.createElement("img");
-    image.src = sancocho;  // image source is set from import
+    image.src = sancocho;
     image.alt = "sancocho";
     content.appendChild(image);
 
