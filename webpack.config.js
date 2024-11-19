@@ -1,6 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin'); // Add this line
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
     mode: 'development', 
@@ -8,16 +8,17 @@ module.exports = {
     output: {
         filename: 'main.js',
         path: path.resolve(__dirname, 'dist'),
+        assetModuleFilename: 'assets/images/[name][ext][query]',
     },
     plugins: [
-        new CleanWebpackPlugin(), // Add cleaning plugin
+        new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
-            template: './src/template.html', 
+            template: './src/template.html',
         }),
     ],
     devServer: {
         static: './dist',
-        port: 4002, 
+        port: 4002,
     },
     module: {
         rules: [
